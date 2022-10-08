@@ -5,12 +5,29 @@ function updateDesc(){
 }
 
 function updateColor(){
-
-   
+    let time = moment().hour();
     
+    // Iterates through each item in the DOM that has the 'description' class
+    $(".description").each(function () {
+      
+    //  Coloring for elements in the future
+        if(parseInt($(this).attr("id")) > time){
+            $(this).addClass('future');
+       }
+    //  Coloring for elements in the present
+        if(parseInt($(this).attr("id")) === time){
+            $(this).addClass('present');
+        }
+    // Coloring for elements in the past
+        if(parseInt($(this).attr("id")) < time){
+            $(this).addClass('past');
+            
+        }
+        
+        
 
+})
 }
-
 
 $('.saveBtn').on('click',updateDesc)
 updateColor()
