@@ -12,6 +12,10 @@ To use this web app, the user must simply type whatever task they wish to store 
 
 Please see the attatched readme in my repo.
 
+## Credits
+<ul>
+<li>https://api.jquery.com/each/</li>
+</ul>
 
 ## Features
 <ul>
